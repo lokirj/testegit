@@ -1,0 +1,24 @@
+<%= link_to 'New Task', new_task_path %>
+
+
+<div class="row">
+
+
+  <div class="col-md-4">
+    <h2 class=" text-center" text-center>Todo</h2>
+    <%= render @to_do %>
+  </div>
+
+  <div class="col-md-4">
+    <h2 class=" text-center" text-center>Doing</h2>
+    <%= render @doing %>
+  </div>  
+
+  <div class="col-md-4">
+    <h2 class=" text-center" text-center>Done</h2>
+    <%= render @done %>
+  </div>
+
+
+</div>
+

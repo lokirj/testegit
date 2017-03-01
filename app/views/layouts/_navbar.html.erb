@@ -1,0 +1,18 @@
+<%= nav_bar  brand: '<i class="fa fa-paperclip" aria-hidden="true"></i> ClipManager'.html_safe do %>
+  <%= menu_group do %>
+
+     <% if current_user %>
+     <%= menu_item "Settings", edit_user_registration_path %>
+     <%= menu_item "Tasks", tasks_path %>
+
+     <%= menu_item "Sign out", destroy_user_session_path, method: :delete %>
+     <% else %>
+     <%= menu_item "About", about_path %>
+     <%= menu_item "Team", team_path %>
+     <%= menu_item "Contact", contact_path %>
+
+     <%= menu_item "Sign in", new_user_session_path %>
+     <% end %>
+
+  <% end %>
+<% end %>
